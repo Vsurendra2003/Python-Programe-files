@@ -1,0 +1,111 @@
+Febonacci series
+
+a=0
+print(a)
+b=1
+print(b)
+for i in range (10):
+    c=a+b
+    a=b
+    b=c
+    print(c)
+
+
+
+#prime numbers for range
+
+a=int(input("enter the a:"))
+b=int(input("enter the b:"))
+p=[]
+for num in range (a,b+1):
+    if(num>1):
+      for i in range(2,num):
+          if (num%i==0):
+            break
+      else:
+         p.append(num)
+print("prime numbers",p)
+
+
+#prime number for paticular number
+
+num=int(input("enter the a:"))
+if(num>1):
+    for i in range (2,num):
+          if (num%i==0): 
+              print("not prime")
+              break
+    else:
+       print("prime")
+    
+
+
+#Palindrome
+
+v=input()
+b=v[::-1]
+if v==b:
+    print("palindrome")
+else:
+    print("not palindrome")
+
+
+#swapping two numbers using temp
+
+a=10
+b=20
+temp=a
+a=b
+b=temp
+print(a)
+print(b)
+    
+
+#swapping two numbers 
+
+a=10
+b=20
+a,b=b,a
+print(a)
+print(b)
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

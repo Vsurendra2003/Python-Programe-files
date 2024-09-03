@@ -1,0 +1,178 @@
+Exercises for Intermediate developers
+
+Exercise 1: Reverse each word of a string
+
+Given:
+
+str = 'My Name is Surendra'
+
+Answer
+
+def reverse_words(Sentence):
+       words = Sentence.split(" ")
+       new_word_list = [word[::-1] for word in words]
+       res_str = " ".join(new_word_list)
+       return res_str
+str1 = "My Name is Surendra"
+print(reverse_words(str1))
+
+Exercise 3: Remove items from a list while iterating
+Description:
+
+In this question, You need to remove items from a list while iterating but without creating a different copy of a list.
+
+Remove numbers greater than 50
+
+Given:
+
+number_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+Answer
+
+number_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in range(len(number_list) - 1, -1, -1):
+    if number_list[i] > 50:
+        del number_list[i]
+print(number_list)
+
+
+Exercise 4: Reverse Dictionary mapping
+Given:
+
+ascii_dict = {'A': 65, 'B': 66, 'C': 67, 'D': 68}
+
+Answer
+
+print({value: key for key, value in {'A': 65, 'B': 66, 'C': 67, 'D': 68}.items()})
+
+
+Exercise 5: Display all duplicate items from a list
+Given:
+
+sample_list = [10, 20, 60, 30, 20, 40, 30, 60, 70, 80]
+
+Answer
+
+sample_list = [10, 20, 60, 30, 20, 40, 30, 60, 70, 80]
+seen = set()
+duplicates = [x for x in sample_list if x in seen or seen.add(x)]
+print(duplicates)
+
+Exercise 6: Filter dictionary to contain keys present in the given list
+Given:
+
+# Dictionary
+d1 = {'A': 65, 'B': 66, 'C': 67, 'D': 68, 'E': 69, 'F': 70}
+
+# Filter dict using following keys
+l1 = ['A', 'C', 'F']
+
+Answer
+
+print({key: {'A': 65, 'B': 66, 'C': 67, 'D': 68, 'E': 69, 'F': 70}[key] for key in ['A', 'C', 'F']})
+
+
+Exercise 7: Print the following number pattern
+1 1 1 1 1 
+2 2 2 2 
+3 3 3 
+4 4 
+5
+
+Answer
+
+rows = 5
+for i in range(1, rows + 1):
+    print((str(i) + ' ') * (rows - i + 1))
+
+    
+Exercise 8: Create an inner function
+Question description: -
+
+Create an outer function that will accept two strings, x and y. (x= 'Emma' and y = 'Kelly'.
+Create an inner function inside an outer function that will concatenate x and y.
+At last, an outer function will join the word 'developer' to it.
+
+Answer
+
+def manipulate(x, y):
+    return x + y + 'Developers'
+result = manipulate('Emma', 'Kelly')
+print(result)
+
+
+Exercise 9: Modify the element of a nested list inside the following list
+Change the element 35 to 3500
+
+Given:
+
+list1 = [5, [10, 15, [20, 25, [30, 35], 40], 45], 50]
+
+Answer
+
+list1 = [5, [10, 15, [20, 25, [30, 35], 40], 45], 50]
+list1[1][2][2][1] = 3500
+print(list1)
+
+Exercise 10: Access the nested key increment from the following dictionary
+Given:
+
+emp_dict = {
+    "company": {
+        "employee": {
+            "name": "Jess",
+            "payable": {
+                "salary": 9000,
+                "increment": 12
+            }
+        }
+    }
+}
+
+
+Answer
+
+emp_dict = {
+    "company": {
+        "employee": {
+            "name": "Jess",
+            "payable": {
+                "salary": 9000,
+                "increment": 12
+            }
+        }
+    }
+}
+print(emp_dict['company']['employee']['payable']['increment'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
